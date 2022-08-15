@@ -57,12 +57,22 @@ def taxcalc(gsalary2):
       tax = tax1 + tax2 + tax3
     return tax
 
+#calculate NHIF Relief
+def calcnhifrelief(nhifamt):
+    nhifrelief=15/100*nhifamt
+    return nhifrelief
+
 def main():
     print('ENTER GROSS SALARY')
     gsalaryx = int(input()) #capture gross salary 
     gsalnet=gsalaryx -nssf  #subtract nssf
     nhifamt =int( calcNhif(gsalaryx)) # nhif compute
-    taxz = int(taxcalc(gsalnet))-2400 # subtract relief
+    nhifrlf=calcnhifrelief(nhifamt )
+    taxz = int(taxcalc(gsalnet))
+    if(taxz>0):
+       taxz = int(taxcalc(gsalnet))-2400-nhifrlf # subtract relief and nhifamt
+
+    print('=======================')   
     print('Tax is ' + str(taxz))
     print('NHIF is ' + str(nhifamt))
     print('NSSF is ' + str(nssf))
