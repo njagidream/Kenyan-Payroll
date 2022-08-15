@@ -45,7 +45,7 @@ def taxcalc(gsalary2):
     tax=0
     if(gsalary2 <= 24000):
       tax = 0
-    elif gsalary2 > 24001 and gsalary2 <= 32333 :
+    elif gsalary2 > 24000 and gsalary2 <= 32333 :
       tax1 = 10 / 100 * 24000
       tax2 = (25 / 100 * (gsalary2 - 24000))
       tax = tax1 + tax2
