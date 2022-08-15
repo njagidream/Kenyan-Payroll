@@ -70,7 +70,7 @@ def main():
     nhifrlf=calcnhifrelief(nhifamt )
     taxz = int(taxcalc(gsalnet))
     if(taxz>0):
-       taxz = int(taxcalc(gsalnet))-2400-nhifrlf # subtract relief and nhifamt
+       taxz = int(taxcalc(gsalnet))-2400-nhifrlf # subtract relief and nhifrelief
 
     print('=======================')   
     print('Tax is ' + str(taxz))
