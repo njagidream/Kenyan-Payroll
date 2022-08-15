@@ -59,10 +59,10 @@ def taxcalc(gsalary2):
 
 def main():
     print('ENTER GROSS SALARY')
-    gsalaryx = int(input())
-    gsalnet=gsalaryx -nssf 
-    nhifamt =int( calcNhif(gsalaryx))
-    taxz = int(taxcalc(gsalnet))-1162 # subtract relief
+    gsalaryx = int(input()) #capture gross salary 
+    gsalnet=gsalaryx -nssf  #subtract nssf
+    nhifamt =int( calcNhif(gsalaryx)) # nhif compute
+    taxz = int(taxcalc(gsalnet))-2400 # subtract relief
     print('Tax is ' + str(taxz))
     print('NHIF is ' + str(nhifamt))
     print('NSSF is ' + str(nssf))
