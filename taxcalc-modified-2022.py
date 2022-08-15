@@ -78,6 +78,6 @@ def main():
     print('NSSF is ' + str(nssf))
     print('Net Income is ' + str(round(gsalaryx-taxz-nhifamt-nssf)))
 
-#Execute main function
+# Execute main function
 main()
 
